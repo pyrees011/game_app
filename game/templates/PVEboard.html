@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+    <title>home</title>
+</head>
+<body>
+    <div class="container">
+        <div class="play_area">
+
+            <div class="gameBoard" id="gameBoard">
+                <div class="div" id="0">{{ board.board[0] }}</div>
+                <div class="div" id="1">{{ board.board[1] }}</div>
+                <div class="div" id="2">{{ board.board[2] }}</div>
+                <div class="div" id="3">{{ board.board[3] }}</div>
+                <div class="div" id="4">{{ board.board[4] }}</div>
+                <div class="div" id="5">{{ board.board[5] }}</div>
+                <div class="div" id="6">{{ board.board[6] }}</div>
+                <div class="div" id="7">{{ board.board[7] }}</div>
+                <div class="div" id="8">{{ board.board[8] }}</div>
+            </div>
+
+            <div class="scoreboard">
+                <div class="player1">
+                    <h6>player 1</h6>
+                    <p>{{ player1 }}</p>
+                </div>
+                <div class="draw">
+                    <h6>draw</h6>
+                    <p>{{ draw }}</p>
+                </div>
+                <div class="player2">
+                    <h6>player 2</h6>
+                    <p>{{ player2 }}</p>
+                </div>
+            </div>
+
+            <a href="{{ url_for('views.resetpve') }}"><button class="button" id="reset">reset</button></a>
+        </div>
+        <div class="chat_area">
+            <h3>This is the chat area</h3>
+        </div>
+        
+    </div>
+
+    <script src="{{ url_for('static', filename='js/PVEboard.js') }}"></script>
+</body>
+</html>

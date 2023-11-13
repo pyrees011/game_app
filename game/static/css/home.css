@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #ffffff;
+    --winning_block: #9df39d;
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'finger_paint', cursive;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+.play_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 38px;
+    width: 70%;
+    margin-top: 40px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin-bottom: 40px;
+    color: wheat;
+}
+
+.player1 .player2 .draw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameBoard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 600px;
+    border: 2px solid black;
+    margin-top: 40px;
+    padding: 20px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+h6 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 28px;
+    text-align: center;
+}
+
+.div {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 64px;
+    border-right: 4px solid;
+    border-bottom: 4px solid;
+}
+.div:nth-child(3n) {
+    border-right: none;
+}
+.div:nth-child(6) ~ .div {
+    border-bottom: none;
+}
+
+.guest_login {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    height: 80%;
+    padding: 20px;
+}
+
+.guest_login button {
+    align-self: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1e90ff;
+    color: rgb(5, 5, 5);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.not_playable {
+    pointer-events: none;
+    cursor: not-allowed;
+}
